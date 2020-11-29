@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="../css/payroll_form.css">
-      <title>Employee payroll form</title>
+      <title>Employee Payroll Form</title>
       <script src="../js/EmployeePayroll.js"></script>
       <script src="../js/payroll_form.js"></script>
       <script src="../js/utility.js"></script>
@@ -21,8 +21,8 @@
         </div>
       </header>
       <div class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
-          <div class="form-head">Employee Payroll form</div>
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
+          <div class="form-head">Employee Payroll Form</div>
           <div class="row-content">
             <label class="label text" for="name">Name</label>
             <input class="input" type="text" name="name" id="name" placeholder="Your Name" required>
@@ -90,7 +90,7 @@
           </div>
           <div class="row-content">
             <label class="label text" for="startDate">Start Date</label>
-            <div>
+            <div id="date">
               <select id="day" name="Day">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -145,6 +145,7 @@
                 <option value="2017">2017</option>
                 <option value="2016">2016</option>
               </select>
+              <error-output class="date-error" for="startDate"></error-output>
             </div>
           </div>
           <div class="row-content">
@@ -162,3 +163,4 @@
       </div>
     </body>
 </html>
+
